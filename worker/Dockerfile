@@ -1,0 +1,6 @@
+FROM golang
+WORKDIR /go/src/github.com/sdchhoker/worker/worker
+COPY . .
+RUN go get -d -v ./...
+RUN go install -v ./...
+CMD ["worker"]
